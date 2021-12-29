@@ -1,0 +1,61 @@
+#include <iostream.h>
+
+class Time
+{
+ public:
+	Time(int h=0,int m=0,int s=0):hour(h),minute(m),sec(s){};;
+
+	int hour;
+	int minute;
+	int sec;
+
+	void get_time( ) ;  
+
+};
+
+
+
+
+void Time::get_time( ) 
+ {cout<<hour<<":"<<minute<<":" <<sec<<endl;}
+
+
+/*
+void main()
+{
+	Time t1(10,12,15);  //定义Time类对象t1,不是常对象
+	
+	const Time t2(20,22,25);  //定义Time类常对象t2
+	
+	const Time *p1=&t1; //定义指向常对象的指针p1，指向t1（不是常对象）
+	
+	const Time *p2=&t2; //定义指向常对象的指针p2，指向t2（常对象）
+	
+	t1.hour=18;    //合法，t1不是常对象
+	
+//	(*p1).hour=18; //非法，不能通过指向常对象的指针改变不是常对象的值
+	
+//	t2.hour=18;    //非法，任何情况t2的值都不能改变
+	
+//	(*p2).hour=18 //非法，任何情况t2的值都不能改变
+
+	Time * const p=&t1; //ptr1指向对象t1，此后不能再改变指向
+
+	p=&t2 //错误,不能改变指向
+
+}*/
+
+
+int main()
+{
+	void fun(const Time *p)   //形参是指向常对象的指针变量p
+
+	Time t1(10,13,56);              //t1不是常对象
+	fun(&t1);                           //实参是对象t1的地址
+	return 0;
+}
+
+void fun(const Time *p)
+{
+	p->hour=18;   // 非法
+}

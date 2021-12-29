@@ -1,0 +1,32 @@
+
+/*void main()
+{
+	const char c[]="boy";  //c[]数值为常变量
+	const char *p;         //p定义为常指针变量
+	p=c;                   //赋值--指向。如果一个变量已被定义为常变量
+	                       //只能用指向常变量的指针变量指向它
+//	char * p1=c;           //错误
+
+}*/
+
+
+/*void main()
+{
+	char c1='a';
+	const char *p; //p定义为常指针变量
+	p=&c1;         //可以指向没有定义为const的变量
+//	*p='b';        //不能通过（p定义为常指针变量）修改其内容
+	c1='b';         //可以通过变量修改其内容，上例不行！
+}*/
+
+
+void main()
+{
+	const char c[]="boy";  //c[]数值为常变量
+	//void fun(char *p);
+	//fun(c);
+	void fun(const char *p);
+	fun(c);
+}
+
+void fun(const char *p){};

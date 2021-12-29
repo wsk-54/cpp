@@ -1,0 +1,42 @@
+{
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.minimap.maxColumn": 40, // 限制缩略图的宽度，控制其最多显示的列数
+
+    "window.zoomLevel": 0,
+    "editor.fontSize": 12,
+
+    "workbench.sideBar.location": "left",
+    "workbench.iconTheme": "material-icon-theme",
+
+    "git.autofetch": true, // 自动从当前 Git 存储库的默认远程库提取提交
+    "git.ignoreMissingGitWarning": true, // 忽视“缺失git”的警告
+
+    "diffEditor.ignoreTrimWhitespace": false, // 差异编译器将忽略前导空格或尾随空格的更改
+
+    "files.autoGuessEncoding": true, // 自动识别文件编码
+    "files.trimTrailingWhitespace": true, // 自动删除文件行尾空格
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.hg/store/**": true
+    },
+    "files.associations": {
+        "iostream": "cpp"
+    },
+
+    "code-runner.runInTerminal": true, //在终端中输出。false在输出中输出，无法输入
+    "code-runner.saveFileBeforeRun": true,
+
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.default.includePath": [
+        "/usr/include",
+        "/usr/local/include",
+        "${workspaceFolder}/**"
+    ],
+    "C_Cpp.errorSquiggles": "Disabled",
+
+    //"terminal.integrated.fontFamily": "Hack Nerd Font",
+    //"terminal.integrated.fontSize": 14, // 控制终端的字号
+
+}

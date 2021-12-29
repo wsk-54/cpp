@@ -1,0 +1,28 @@
+#include <iostream.h>
+
+class Time
+{
+ public:
+	Time(int h=0,int m=0,int s=0):hour(h),minute(m),sec(s){};;
+
+	int hour;
+	int minute;
+	int sec;
+	void get_time( ) const;  
+
+};
+
+
+
+
+void Time::get_time( ) const {cout<<hour<<":"<<minute<<":" <<sec<<endl;}
+
+
+
+void main()
+{
+	Time t1(10,20,30),t2; 
+	Time * const p=&t1;
+	t1.get_time( ); 
+//	p=&t2;
+}

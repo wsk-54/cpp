@@ -1,0 +1,33 @@
+#include <iostream.h>
+
+class Time
+{
+ public:
+	Time(int,int,int);
+
+	const int hour;
+	int minute;
+	int sec;
+	void get_time( ) const;  
+
+};
+
+/*Time::Time(int h,int m,int s)
+{
+	hour=h;
+	minute=m;
+	sec=s;
+}*/
+Time::Time(int h,int m,int s):hour(h),minute(m),sec(s){};
+
+void Time::get_time( ) const {cout<<hour<<":"<<minute<<":" <<sec<<endl;}
+
+
+
+void main()
+{
+	Time t1(10,15,36); 
+	t1.get_time( ); //常对象不能调用该常对象的非const型的成员函数；除非把要调用的成员函数定义为常成员函数const
+//	t1.hour=20;//常数据成员的值不能修改
+
+}
